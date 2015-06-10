@@ -22,11 +22,7 @@ $ sudo npm install grunt-contrib-uglify;
 
 ## Email Setup
 
-The email configurations are in the `php/FormHandler.php:sendEmailNotification` function. They are currently set to use Aaron Fruth's gmail account as an SMTP relay, and to deliver all messages from that site to atfruth@gmail.com.
-
-#####Gmail also limits the speed of emails going out of SMTP relays, so an AJAX request for a message may take up to 90 seconds. The form is designed to handle this, and will only time out after 120 seconds.
-
-This password provided has limited functionality due to personal privacy issues. For production, a dedicated email address would be preferred, and having sensitive information saved as server variables would further reduce risk.
+The email configurations are in the `php/FormHandler.php:sendEmailNotification` function.
 
 If PHPMailer is not sending, you may need to install sendmail binaries. This is required for the SMTP relay to Gmail. To do this, just run this command.
 
