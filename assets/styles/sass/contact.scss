@@ -1,0 +1,239 @@
+// COLORS
+
+$border-color:      #D8D8D8;
+$background-color:  #F4F4F4;
+$text-color:        #444444;
+$form-color:        #B5B5B5;
+$orange-light:      #14A9E6;
+$orange-dark:       #1C6CCF;
+
+// STYLE VARIABLES
+$border-radius:     5px;
+$break:             600px;
+
+// FONT FAMILIES
+$montserrat:  'Montserrat', sans-serif;
+$opensans:    'Open Sans', sans-serif;
+
+h1, h2, h3, p {
+  margin:  0px;
+  padding: 0px;
+}
+
+span.highlight {
+  color: $orange-dark;
+}
+
+.alert {
+  width: auto;
+  margin: 10px 5%;
+  padding: 5px 0px;
+  color: white;
+  border-radius: $border-radius;
+  &.error {
+    background-color: red;
+  }
+  &.success {
+    background-color: green;
+  }
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+body {
+  background-color: $background-color;
+
+  div#container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid $border-color;
+    background-color: white;
+    max-width: 1234px;
+
+    header {
+      background-image: url("../images/background.jpg");
+      background-position: 50% 65%;
+      font-family: $montserrat;
+      font-weight: bold;
+      margin: 0px;
+      padding: 50px 0px;
+      color: white;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 10;
+
+      .overlay {
+        position: absolute;
+        z-index: 20;
+        top:    0px;
+        left:   0px;
+        right:  0px;
+        bottom: 0px;
+        background-color: rgba(50, 50, 60, 0.8);
+      }
+
+      div.logo {
+        position: relative;
+        z-index: 30;
+        img {
+          margin-bottom: 20px;
+          padding-right: 20px;
+          border: 5px solid $orange-dark;
+        }
+        h1 {
+          font-size: 250%;
+        }
+      }
+
+    }
+
+    main {
+      padding: 0px 0px 20px 0px;
+      margin: 0px;
+      color: $text-color;
+      font-family: $opensans;
+
+      h2 {
+        border-bottom: 1px solid $border-color;
+        font-family: $montserrat;
+        font-weight: normal;
+        padding: 20px;
+        margin: 20px 5%;
+        font-size: 120%;
+      }
+
+      section.left {
+        float: left;
+        width: 42.5%;
+        margin-left: 5%;
+      }
+
+      section.right {
+        float: right;
+        width: 42.5%;
+        margin-right: 5%;
+      }
+
+      label {
+        display: block;
+        text-align: left;
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: 75%;
+        clear: both;
+        width: 100%;
+        margin-bottom: 5px;
+
+        span.right {
+          display: block;
+          //color: $border-color;
+          float: right;
+          font-weight: normal;
+          font-size: 80%;
+        }
+      }
+
+
+      select, button {
+        width: 100%;
+      }
+
+      button {
+        text-transform: uppercase;
+        border-radius: $border-radius;
+        font-family: $montserrat;
+        color: white;
+        padding: 15px 0px;
+        border: none;
+
+        background: $orange-light;
+        background: -moz-linear-gradient(top, $orange-light 0%, $orange-dark 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, $orange-light), color-stop(100%, $orange-dark));
+        background: -webkit-linear-gradient(top, $orange-light 0%, $orange-dark 100%);
+        background: -o-linear-gradient(top, $orange-light 0%, $orange-dark 100%);
+        background: -ms-linear-gradient(top, $orange-light 0%, $orange-dark 100%);
+        background: linear-gradient(to bottom, $orange-light 0%, $orange-dark 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange-light', endColorstr='$orange-dark', GradientType=0 );
+      }
+
+      .form {
+        background: white;
+        margin-bottom: 20px;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        width: 96%;
+        padding: 5px 2%;
+        position: relative;
+        overflow-x: hidden;
+        height: 26px;
+
+        &.error {
+          border: 1px solid red;
+          i, label {
+            color: red;
+          }
+        }
+
+        i {
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          color: $form-color;
+        }
+
+        input, select, textarea {
+          border: none;
+          width: 100%;
+          padding-left: 25px;
+          box-sizing: border-box;
+          color: $form-color;
+          font-family: $opensans;
+        }
+
+        select {
+          border: none;
+          width: 100%;
+          color: $form-color;
+          background: white;
+          font-family: $opensans;
+          padding: 0px;
+        }
+
+        &.message {
+          overflow: auto;
+          height: auto;
+
+          textarea {
+            padding: 2px 0px 0px 25px;
+            margin: 0px;
+            box-sizing: border-box;
+          }
+
+        }
+
+      }
+
+      @media screen and (max-width: $break) {
+        section.left, section.right {
+          width: auto;
+          float: none;
+          clear: both;
+          margin: 15px;
+        }
+      }
+
+    }
+
+    @media screen and (max-width: $break) {
+      width: 95%;
+    }
+
+  }
+}
+
+.clear {
+  clear: both;
+  float: none;
+}

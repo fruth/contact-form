@@ -1,0 +1,163 @@
+h1, h2, h3, p {
+  margin: 0px;
+  padding: 0px; }
+
+span.highlight {
+  color: #1C6CCF; }
+
+.alert {
+  width: auto;
+  margin: 10px 5%;
+  padding: 5px 0px;
+  color: white;
+  border-radius: 5px; }
+  .alert.error {
+    background-color: red; }
+  .alert.success {
+    background-color: green; }
+  .alert:last-of-type {
+    margin-bottom: 0px; }
+
+body {
+  background-color: #F4F4F4; }
+  body div#container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #D8D8D8;
+    background-color: white;
+    max-width: 1234px; }
+    body div#container header {
+      background-image: url("../images/background.jpg");
+      background-position: 50% 65%;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      margin: 0px;
+      padding: 50px 0px;
+      color: white;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 10; }
+      body div#container header .overlay {
+        position: absolute;
+        z-index: 20;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: rgba(50, 50, 60, 0.8); }
+      body div#container header div.logo {
+        position: relative;
+        z-index: 30; }
+        body div#container header div.logo img {
+          margin-bottom: 20px;
+          padding-right: 20px;
+          border: 5px solid #1C6CCF; }
+        body div#container header div.logo h1 {
+          font-size: 250%; }
+    body div#container main {
+      padding: 0px 0px 20px 0px;
+      margin: 0px;
+      color: #444444;
+      font-family: "Open Sans", sans-serif; }
+      body div#container main h2 {
+        border-bottom: 1px solid #D8D8D8;
+        font-family: "Montserrat", sans-serif;
+        font-weight: normal;
+        padding: 20px;
+        margin: 20px 5%;
+        font-size: 120%; }
+      body div#container main section.left {
+        float: left;
+        width: 42.5%;
+        margin-left: 5%; }
+      body div#container main section.right {
+        float: right;
+        width: 42.5%;
+        margin-right: 5%; }
+      body div#container main label {
+        display: block;
+        text-align: left;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 75%;
+        clear: both;
+        width: 100%;
+        margin-bottom: 5px; }
+        body div#container main label span.right {
+          display: block;
+          float: right;
+          font-weight: normal;
+          font-size: 80%; }
+      body div#container main select, body div#container main button {
+        width: 100%; }
+      body div#container main button {
+        text-transform: uppercase;
+        border-radius: 5px;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        padding: 15px 0px;
+        border: none;
+        background: #14A9E6;
+        background: -moz-linear-gradient(top, #14A9E6 0%, #1C6CCF 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #14A9E6), color-stop(100%, #1C6CCF));
+        background: -webkit-linear-gradient(top, #14A9E6 0%, #1C6CCF 100%);
+        background: -o-linear-gradient(top, #14A9E6 0%, #1C6CCF 100%);
+        background: -ms-linear-gradient(top, #14A9E6 0%, #1C6CCF 100%);
+        background: linear-gradient(to bottom, #14A9E6 0%, #1C6CCF 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$orange-light', endColorstr='$orange-dark', GradientType=0 ); }
+      body div#container main .form {
+        background: white;
+        margin-bottom: 20px;
+        border: 1px solid #D8D8D8;
+        border-radius: 5px;
+        width: 96%;
+        padding: 5px 2%;
+        position: relative;
+        overflow-x: hidden;
+        height: 26px; }
+        body div#container main .form.error {
+          border: 1px solid red; }
+          body div#container main .form.error i, body div#container main .form.error label {
+            color: red; }
+        body div#container main .form i {
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          color: #B5B5B5; }
+        body div#container main .form input, body div#container main .form select, body div#container main .form textarea {
+          border: none;
+          width: 100%;
+          padding-left: 25px;
+          box-sizing: border-box;
+          color: #B5B5B5;
+          font-family: "Open Sans", sans-serif; }
+        body div#container main .form select {
+          border: none;
+          width: 100%;
+          color: #B5B5B5;
+          background: white;
+          font-family: "Open Sans", sans-serif;
+          padding: 0px; }
+        body div#container main .form.message {
+          overflow: auto;
+          height: auto; }
+          body div#container main .form.message textarea {
+            padding: 2px 0px 0px 25px;
+            margin: 0px;
+            box-sizing: border-box; }
+      @media screen and (max-width: 600px) {
+        body div#container main section.left, body div#container main section.right {
+          width: auto;
+          float: none;
+          clear: both;
+          margin: 15px; } }
+    @media screen and (max-width: 600px) {
+      body div#container {
+        width: 95%; } }
+
+.clear {
+  clear: both;
+  float: none; }
+
+/*# sourceMappingURL=contact.css.map */
