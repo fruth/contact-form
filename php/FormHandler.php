@@ -34,16 +34,11 @@ class FormHandler {
       die("Connection failed: " . $mysql->connect_error);
     }
 
+    $stmt = $mysql->prepare( "INSERT INTO contact_us (name, email, message) VALUES (?, ?, ?)" );
+    $stmt->bind_param('sss', $name, $email, $message);
+    $success = $stmt->execute();
 
-
-    $sql = "INSERT INTO contact_us (name, email, message)
-            VALUES ('". $name. "', '". $email . "', '" . $message . "')";
-
-    $success = true;
-    if ($mysql->query($sql) === FALSE) {
-      $success = false;
-    }
-
+    $stmt->close();
     $mysql->close();
 
     return $success;
